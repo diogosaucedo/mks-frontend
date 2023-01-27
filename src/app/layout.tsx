@@ -1,10 +1,14 @@
+import { Montserrat } from '@next/font/google';
+
 import HomeLayoutProps from './types';
+
+const montserrat = Montserrat({ subsets: ['latin'] });
 
 const HomeLayout = (props: HomeLayoutProps) => {
   return (
     <html lang="pt-br">
       <head />
-      <body>{props.children}</body>
+      <body className={montserrat.className}>{props.children}</body>
     </html>
   );
 };
