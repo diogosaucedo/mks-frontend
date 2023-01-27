@@ -1,18 +1,12 @@
-import './globals.css'
+import HomeLayoutProps from './types';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+const HomeLayout = (props: HomeLayoutProps) => {
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html lang="pt-br">
       <head />
-      <body>{children}</body>
+      <body>{props.children}</body>
     </html>
-  )
-}
+  );
+};
+
+export default HomeLayout;
