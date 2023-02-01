@@ -19,7 +19,7 @@ export const Cart = () => {
           width="100%"
           alignItems="center"
           justifyContent="space-between"
-          height="100%"
+          height="100vh"
         >
           <Flex flexDirection="column" width="90%" padding="20px 0">
             <Stack justifyContent="space-between" alignItems="center">
