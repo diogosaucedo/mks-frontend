@@ -1,6 +1,14 @@
 import React from 'react';
 import CartProductProps from './types';
-import { Button, Card, Image, Input, Stack, Text } from '@/components';
+import {
+  Button,
+  Flex,
+  Highlight,
+  Image,
+  Input,
+  Stack,
+  Text,
+} from '@/components';
 import { colors } from '@/themes';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -10,7 +18,10 @@ import {
   counter,
   incrementAmountProduct,
   decrementAmountProduct,
+  getTotal,
 } from '@/store/Stock.store';
+
+import * as Styled from './styles';
 
 export const CartProduct = (props: CartProductProps) => {
   const dispatch = useDispatch();
@@ -22,7 +33,7 @@ export const CartProduct = (props: CartProductProps) => {
     }
   }
   return (
-    <Card
+    <Styled.CartProduct
       alignItems="center"
       width="379px"
       height="95px"
@@ -30,65 +41,74 @@ export const CartProduct = (props: CartProductProps) => {
       background={colors.white}
       boxShadow="-2px 2px 10px rgba(0, 0, 0, 0.05)"
       key={props.key}
-      justifyContent="center"
+      justifyContent="space-around"
     >
       <Stack justifyContent="space-between" alignItems="center" gap="20px">
-        <Image
-          height="60px"
-          width="fit-content"
-          src={props.data.photo}
-          alt={props.data.name}
-        />
-        <Text width="100px" fontSize="13px">
-          {props.data.name}
-        </Text>
-        <Stack flexDirection="column" gap="4px">
-          <Text fontSize="5px">Qtd:</Text>
-          <Stack border={`0.3px solid ${colors.lightGray}`} borderRadius="4px">
-            <Button
-              fontSize="12px"
-              background="none"
-              border="none"
-              width="15px"
-              height="19px"
-              onClick={() => {
-                dispatch(decrementAmountProduct(props.data.id));
-                dispatch(counter());
-              }}
+        <Flex alignItems="center" gap="21px">
+          <Image
+            height="60px"
+            width="fit-content"
+            src={props.data.photo}
+            alt={props.data.name}
+          />
+          <Text width="100px" fontSize="13px">
+            {props.data.name}
+          </Text>
+        </Flex>
+        <Stack alignItems="center" gap="40px">
+          <Stack flexDirection="column" gap="4px">
+            <Text fontSize="5px">Qtd:</Text>
+            <Stack
+              border={`0.3px solid ${colors.lightGray}`}
+              borderRadius="4px"
             >
-              -
-            </Button>
-            <Input
-              fontSize="12px"
-              disabled
-              value={amount}
-              pattern="[0-9]+"
-              type="text"
-              width="20px"
-              height="19px"
-              border="none"
-              borderLeft={`0.3px solid ${colors.lightGray}`}
-              borderRight={`0.3px solid ${colors.lightGray}`}
-              textAlign="center"
-            />
-            <Button
-              fontSize="12px"
-              background="none"
-              border="none"
-              width="15px"
-              height="19px"
-              onClick={() => {
-                dispatch(incrementAmountProduct(props.data.id));
-                dispatch(counter());
-              }}
-            >
-              +
-            </Button>
+              <Button
+                fontSize="12px"
+                background="none"
+                border="none"
+                width="15px"
+                height="19px"
+                onClick={() => {
+                  dispatch(decrementAmountProduct(props.data.id));
+                  dispatch(counter());
+                  dispatch(getTotal());
+                }}
+              >
+                -
+              </Button>
+              <Input
+                fontSize="12px"
+                disabled
+                value={amount}
+                pattern="[0-9]+"
+                type="text"
+                width="20px"
+                height="19px"
+                border="none"
+                borderLeft={`0.3px solid ${colors.lightGray}`}
+                borderRight={`0.3px solid ${colors.lightGray}`}
+                textAlign="center"
+              />
+              <Button
+                fontSize="12px"
+                background="none"
+                border="none"
+                width="15px"
+                height="19px"
+                onClick={() => {
+                  dispatch(incrementAmountProduct(props.data.id));
+                  dispatch(counter());
+                  dispatch(getTotal());
+                }}
+              >
+                +
+              </Button>
+            </Stack>
           </Stack>
+          <Highlight background="none" fontSize="14px" fontWeight={700}>
+            R${Math.trunc(props.data.price)}
+          </Highlight>
         </Stack>
-        <Text fontSize="14px" fontWeight={700}>
-          R${Math.trunc(props.data.price)}
-        </Text>
       </Stack>
       <Button
         width="18px"
@@ -98,11 +118,14 @@ export const CartProduct = (props: CartProductProps) => {
         onClick={() => {
           dispatch(removeProduct(props.data.id));
           dispatch(counter());
+          dispatch(getTotal());
         }}
-        transform="translate(23px, -45px)"
+        transform="translate(10px, -45px)"
       >
-        <Image width="8px" height="fit-content" src="x.svg" alt="icon close" />
+        <Text fontSize="8px" color={colors.white}>
+          X
+        </Text>
       </Button>
-    </Card>
+    </Styled.CartProduct>
   );
 };
