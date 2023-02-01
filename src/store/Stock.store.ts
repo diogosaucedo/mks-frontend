@@ -56,20 +56,6 @@ const stock = createSlice({
         }
       });
     },
-    setAmountProduct(
-      state,
-      action: PayloadAction<Pick<ICardProduct, 'id' | 'amount'>>,
-    ) {
-      if (action.payload.amount < 1) return;
-
-      state.products = state.products.map((product) => {
-        if (product.id === action.payload.id) {
-          return { ...product, amount: action.payload.amount };
-        } else {
-          return product;
-        }
-      });
-    },
   },
 });
 
@@ -81,6 +67,5 @@ export const {
   getTotal,
   incrementAmountProduct,
   decrementAmountProduct,
-  setAmountProduct,
 } = stock.actions;
 export default stock.reducer;
