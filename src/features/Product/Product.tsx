@@ -1,6 +1,5 @@
 import {
   Button,
-  Card,
   Flex,
   Heading,
   Highlight,
@@ -13,12 +12,14 @@ import { ProductProps } from './type';
 import { colors } from '@/themes';
 
 import { useDispatch } from 'react-redux';
-import { addProduct, counter } from '@/store/Stock.store';
+import { addProduct, counter, getTotal } from '@/store/Stock.store';
+
+import * as Styled from './styles';
 
 export const Product = (props: ProductProps) => {
   const dispatch = useDispatch();
   return (
-    <Card
+    <Styled.Product
       key={props.data.id}
       width="218px"
       height="285px"
@@ -74,6 +75,7 @@ export const Product = (props: ProductProps) => {
         onClick={() => {
           dispatch(addProduct({ ...props.data, amount: 1 }));
           dispatch(counter());
+          dispatch(getTotal());
         }}
       >
         <Stack gap="14px" alignItems="center">
@@ -88,6 +90,6 @@ export const Product = (props: ProductProps) => {
           </Text>
         </Stack>
       </Button>
-    </Card>
+    </Styled.Product>
   );
 };
