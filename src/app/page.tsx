@@ -1,8 +1,9 @@
 'use client';
-import { Center, Flex } from '@/components';
+import { Center } from '@/components';
 import { Product } from '@/features';
 import { IProduct } from '@/interfaces';
 import { use } from 'react';
+import * as Styled from './Styles';
 
 const getProducts = async (): Promise<IProduct[] | undefined> => {
   const url =
@@ -15,21 +16,22 @@ const getProducts = async (): Promise<IProduct[] | undefined> => {
 const Home = () => {
   const products = use(getProducts());
 
-  const flexProps = {
+  const productsProps = {
     width: '100%',
     maxWidth: '938px',
     flexWrap: 'wrap',
     gap: '20px',
+    justifyContent: 'center',
   };
 
   return (
     <>
       <Center width="100%" height="100%">
-        <Flex {...flexProps}>
+        <Styled.Products {...productsProps}>
           {products?.map((product) => (
             <Product key={product.id} data={product} />
           ))}
-        </Flex>
+        </Styled.Products>
       </Center>
     </>
   );
