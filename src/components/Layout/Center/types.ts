@@ -1,11 +1,7 @@
+import { IBoxModel, IDisplay } from "@/interfaces";
+
 type CenterProps = {
   children: React.ReactNode;
-  width?: string;
-  height?: string;
-  padding?: string;
-  borderRadius?: string;
-  background?: string;
-  border?: string;
-};
+} & IBoxModel & IDisplay;
 
 export default CenterProps;

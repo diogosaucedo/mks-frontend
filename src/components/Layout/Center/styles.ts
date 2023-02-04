@@ -10,13 +10,22 @@ const Center = styled.div<CenterProps>`
 
   // Box Model
   width: ${({ width }) => width || 'fit-content'};
+  min-width: ${({ minWidth }) => minWidth};
+  max-width: ${({ maxWidth }) => maxWidth};
   height: ${({ height }) => height || 'fit-content'};
+  min-height: ${({ minHeight }) => minHeight};
+  max-height: ${({ maxHeight }) => maxHeight};
   padding: ${({ padding }) => padding};
 
   // Display
-  border-radius: ${({ borderRadius }) => borderRadius};
   background: ${({ background }) => background};
   border: ${({ border }) => border};
+  border-top: ${({ borderTop }) => borderTop};
+  border-right: ${({ borderRight }) => borderRight};
+  border-bottom: ${({ borderBottom }) => borderBottom};
+  border-left: ${({ borderLeft }) => borderLeft};
+  border-radius: ${({ borderRadius }) => borderRadius};
+  box-shadow: ${({ boxShadow }) => boxShadow};
 `;
 
 export { Center };
