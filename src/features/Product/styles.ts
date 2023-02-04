@@ -3,13 +3,19 @@ import styled from 'styled-components';
 import { Card } from '@/components';
 import { Button } from '@/components/Form/Button/styles';
 import { size } from '@/themes';
-import { Image } from '@/components/Media and Icons/Image/styles';
+import { Image } from '@/components/Media/Image/styles';
 import { Highlight } from '@/components/Typography/Highlight/styles';
 import { Heading } from '@/components/Typography/Heading/styles';
 import { Text } from '@/components/Typography/Text/styles';
+import { Flex } from '@/components/Layout/Flex/styles';
 
 export const Product = styled(Card)`
-  // Responsive
+  width: 218px;
+  height: 285px;
+  border-radius: 8px;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
 
   @media (max-width: ${size.small}px) {
     width: 250px;
@@ -21,7 +27,8 @@ export const Product = styled(Card)`
       height: 158px;
     }
 
-    ${Highlight} {
+    ${Flex} > ${Highlight} {
+      width: fit-content;
       padding: 5px 10px;
     }
 

@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component should match snapshot 1`] = `
+<div
+  class="sc-kDvujY kPajjf sc-ipEyDJ dvLNvM"
+>
+  <div
+    class="sc-gKPRtg VeQuV"
+  >
+    <img
+      alt="Headset Cloud Stinger"
+      class="sc-ftTHYK jBOThg"
+      height="138px"
+      src="https://mks-sistemas.nyc3.digitaloceanspaces.com/products/hyperxcloudstinger.webp"
+      width="fit-content"
+    />
+    <div
+      class="sc-gKPRtg ivrkOC"
+      width="100%"
+    >
+      <h2
+        class="sc-bcXHqe jHaUzF"
+        color="#2C2C2C"
+        font-size="16px"
+        font-weight="400"
+        height="38px"
+        type="h2"
+        width="120px"
+      >
+        Headset Cloud Stinger
+      </h2>
+      <p
+        class="sc-gswNZR fiTlfy sc-dkrFOg dMUiud"
+        color="#FFFFFF"
+        font-size="15px"
+        font-weight="700"
+      >
+        R$600
+      </p>
+    </div>
+    <p
+      class="sc-gswNZR dEUSgy"
+      font-size="10px"
+      font-weight="300"
+      height="25px"
+      overflow="hidden"
+      width="190px"
+    >
+      O HyperX Cloud Stinger™ é o headset ideal para jogadores que procuram leveza e conforto, qualidade de som superior e maior praticidade.
+    </p>
+  </div>
+  <button
+    class="sc-hLBbgP dRxJKH"
+    height="32px"
+    width="100%"
+  >
+    <div
+      class="sc-jSUZER hIaACa"
+    >
+      <img
+        alt="Shopping bag icon"
+        class="sc-ftTHYK fHavDg"
+        height="fit-content"
+        src="shopping-bag.svg"
+        width="13px"
+      />
+      <p
+        class="sc-gswNZR gtgrOE"
+        color="#FFFFFF"
+        font-size="14px"
+        font-weight="600"
+      >
+        COMPRAR
+      </p>
+    </div>
+  </button>
+</div>
+`;
+
+exports[`Product feature should match snapshot 1`] = `
+<div
+  class="sc-kDvujY kPajjf sc-ipEyDJ dvLNvM"
+>
+  <div
+    class="sc-gKPRtg VeQuV"
+  >
+    <img
+      alt="Headset Cloud Stinger"
+      class="sc-ftTHYK jBOThg"
+      height="138px"
+      src="https://mks-sistemas.nyc3.digitaloceanspaces.com/products/hyperxcloudstinger.webp"
+      width="fit-content"
+    />
+    <div
+      class="sc-gKPRtg ivrkOC"
+      width="100%"
+    >
+      <h2
+        class="sc-bcXHqe jHaUzF"
+        color="#2C2C2C"
+        font-size="16px"
+        font-weight="400"
+        height="38px"
+        type="h2"
+        width="120px"
+      >
+        Headset Cloud Stinger
+      </h2>
+      <p
+        class="sc-gswNZR fiTlfy sc-dkrFOg dMUiud"
+        color="#FFFFFF"
+        font-size="15px"
+        font-weight="700"
+      >
+        R$600
+      </p>
+    </div>
+    <p
+      class="sc-gswNZR dEUSgy"
+      font-size="10px"
+      font-weight="300"
+      height="25px"
+      overflow="hidden"
+      width="190px"
+    >
+      O HyperX Cloud Stinger™ é o headset ideal para jogadores que procuram leveza e conforto, qualidade de som superior e maior praticidade.
+    </p>
+  </div>
+  <button
+    class="sc-hLBbgP dRxJKH"
+    height="32px"
+    width="100%"
+  >
+    <div
+      class="sc-jSUZER hIaACa"
+    >
+      <img
+        alt="Shopping bag icon"
+        class="sc-ftTHYK fHavDg"
+        height="fit-content"
+        src="shopping-bag.svg"
+        width="13px"
+      />
+      <p
+        class="sc-gswNZR gtgrOE"
+        color="#FFFFFF"
+        font-size="14px"
+        font-weight="600"
+      >
+        COMPRAR
+      </p>
+    </div>
+  </button>
+</div>
+`;
