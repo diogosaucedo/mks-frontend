@@ -26,23 +26,35 @@ import * as Styled from './styles';
 export const CartProduct = (props: CartProductProps) => {
   const dispatch = useDispatch();
   const stock = useSelector((state: RootState) => state.stock);
+
   let amount = 1;
+
   for (const product of stock.products) {
     if (product.id === props.data.id) {
       amount = product.amount;
     }
   }
+
+  const handleClickIncrement = () => {
+    dispatch(incrementAmountProduct(props.data.id));
+    dispatch(counter());
+    dispatch(getTotal());
+  };
+
+  const handleClickDecrement = () => {
+    dispatch(decrementAmountProduct(props.data.id));
+    dispatch(counter());
+    dispatch(getTotal());
+  };
+
+  const handleClickRemove = () => {
+    dispatch(removeProduct(props.data.id));
+    dispatch(counter());
+    dispatch(getTotal());
+  };
+  
   return (
-    <Styled.CartProduct
-      alignItems="center"
-      width="379px"
-      height="95px"
-      borderRadius="8px"
-      background={colors.white}
-      boxShadow="-2px 2px 10px rgba(0, 0, 0, 0.05)"
-      key={props.key}
-      justifyContent="space-around"
-    >
+    <Styled.CartProduct key={props.key}>
       <Stack justifyContent="space-between" alignItems="center" gap="20px">
         <Flex alignItems="center" gap="21px">
           <Image
@@ -68,11 +80,7 @@ export const CartProduct = (props: CartProductProps) => {
                 border="none"
                 width="15px"
                 height="19px"
-                onClick={() => {
-                  dispatch(decrementAmountProduct(props.data.id));
-                  dispatch(counter());
-                  dispatch(getTotal());
-                }}
+                onClick={handleClickDecrement}
               >
                 -
               </Button>
@@ -80,7 +88,6 @@ export const CartProduct = (props: CartProductProps) => {
                 fontSize="12px"
                 disabled
                 value={amount}
-                pattern="[0-9]+"
                 type="text"
                 width="20px"
                 height="19px"
@@ -95,11 +102,7 @@ export const CartProduct = (props: CartProductProps) => {
                 border="none"
                 width="15px"
                 height="19px"
-                onClick={() => {
-                  dispatch(incrementAmountProduct(props.data.id));
-                  dispatch(counter());
-                  dispatch(getTotal());
-                }}
+                onClick={handleClickIncrement}
               >
                 +
               </Button>
@@ -115,11 +118,7 @@ export const CartProduct = (props: CartProductProps) => {
         height="18px"
         background={colors.black}
         borderRadius="50%"
-        onClick={() => {
-          dispatch(removeProduct(props.data.id));
-          dispatch(counter());
-          dispatch(getTotal());
-        }}
+        onClick={handleClickRemove}
         transform="translate(10px, -45px)"
       >
         <Text fontSize="8px" color={colors.white}>

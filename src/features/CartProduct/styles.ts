@@ -3,13 +3,21 @@ import { Button } from '@/components/Form/Button/styles';
 import { Input } from '@/components/Form/Input/styles';
 import { Flex } from '@/components/Layout/Flex/styles';
 import { Stack } from '@/components/Layout/Stack/styles';
-import { Image } from '@/components/Media and Icons/Image/styles';
+import { Image } from '@/components/Media/Image/styles';
 import { Highlight } from '@/components/Typography/Highlight/styles';
 import { Text } from '@/components/Typography/Text/styles';
 import { colors, size } from '@/themes';
 import styled from 'styled-components';
 
 export const CartProduct = styled(Card)`
+  align-items: center;
+  justify-content: space-around;
+  width: 379px;
+  height: 95px;
+  border-radius: 8px;
+  background: ${colors.white};
+  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.05);
+
   @media (max-width: ${size.small}px) {
     width: 250px;
     height: 220px;

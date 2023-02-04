@@ -5,4 +5,5 @@ type CartProductProps = {
   data: ICardProduct;
   key?: number | string;
 };
+
 export default CartProductProps;

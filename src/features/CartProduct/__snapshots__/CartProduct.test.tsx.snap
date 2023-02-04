@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardProduct feature should match snapshot 1`] = `
+<div
+  class="sc-kDvujY kPajjf sc-ipEyDJ cIDRcz"
+>
+  <div
+    class="sc-jSUZER klzDyK"
+  >
+    <div
+      class="sc-gKPRtg fNtGPD"
+    >
+      <img
+        alt="Headset Cloud Stinger"
+        class="sc-ftTHYK jzygvA"
+        height="60px"
+        src="https://mks-sistemas.nyc3.digitaloceanspaces.com/products/hyperxcloudstinger.webp"
+        width="fit-content"
+      />
+      <p
+        class="sc-gswNZR ianvmX"
+        font-size="13px"
+        width="100px"
+      >
+        Headset Cloud Stinger
+      </p>
+    </div>
+    <div
+      class="sc-jSUZER bIGWDn"
+    >
+      <div
+        class="sc-jSUZER kXwoZG"
+      >
+        <p
+          class="sc-gswNZR fcuUFZ"
+          font-size="5px"
+        >
+          Qtd:
+        </p>
+        <div
+          class="sc-jSUZER fwiXev"
+        >
+          <button
+            class="sc-hLBbgP cIfbAO"
+            font-size="12px"
+            height="19px"
+            width="15px"
+          >
+            -
+          </button>
+          <input
+            class="sc-eDvSVe iAslpS"
+            disabled=""
+            font-size="12px"
+            height="19px"
+            type="text"
+            value="1"
+            width="20px"
+          />
+          <button
+            class="sc-hLBbgP cIfbAO"
+            font-size="12px"
+            height="19px"
+            width="15px"
+          >
+            +
+          </button>
+        </div>
+      </div>
+      <p
+        class="sc-gswNZR dRomFG sc-dkrFOg kJtyTs"
+        font-size="14px"
+        font-weight="700"
+      >
+        R$600
+      </p>
+    </div>
+  </div>
+  <button
+    class="sc-hLBbgP gdtDKI"
+    height="18px"
+    transform="translate(10px, -45px)"
+    width="18px"
+  >
+    <p
+      class="sc-gswNZR bOUCb"
+      color="#FFFFFF"
+      font-size="8px"
+    >
+      X
+    </p>
+  </button>
+</div>
+`;
