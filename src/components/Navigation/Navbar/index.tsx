@@ -11,13 +11,14 @@ import { toggleVisible, getTotal } from '@/store/Stock.store';
 export const NavBar = () => {
   const dispatch = useDispatch();
   const stock = useSelector((state: RootState) => state.stock);
-  const navProps = {
-    width: '100%',
-    height: '100px',
-    background: colors.darkBlue,
+
+  const handleClick = () => {
+    dispatch(toggleVisible());
+    dispatch(getTotal());
   };
+
   return (
-    <Styled.Navbar {...navProps}>
+    <Styled.Navbar width="100%" height="100px" background={colors.darkBlue}>
       <Flex
         width="90%"
         maxWidth="1300px"
@@ -44,10 +45,7 @@ export const NavBar = () => {
             borderRadius="8px"
             background={colors.white}
             border="none"
-            onClick={() => {
-              dispatch(toggleVisible());
-              dispatch(getTotal());
-            }}
+            onClick={handleClick}
           >
             <Stack alignItems="center" gap="16px">
               <Image

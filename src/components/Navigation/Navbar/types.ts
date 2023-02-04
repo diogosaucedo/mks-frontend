@@ -1,8 +1,8 @@
+import { IBoxModel, IDisplay } from '@/interfaces';
+
 type NavbarProps = {
   children: React.ReactNode;
-  width?: string;
-  height?: string;
-  background?: string;
-};
+} & IBoxModel &
+  IDisplay;
 
 export default NavbarProps;

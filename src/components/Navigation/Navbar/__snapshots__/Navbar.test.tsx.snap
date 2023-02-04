@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component should match snapshot 1`] = `
+<nav
+  class="sc-jSUZER gkjDCd"
+  height="100px"
+  width="100%"
+>
+  <div
+    class="sc-ftTHYK intCNY"
+    width="90%"
+  >
+    <div
+      class="sc-hLBbgP hgsTQh"
+    >
+      <h1
+        class="sc-bcXHqe dFqMNp"
+        color="#FFFFFF"
+        font-size="40px"
+        font-weight="600"
+        type="h1"
+      >
+        MKS
+      </h1>
+      <p
+        class="sc-gswNZR hRerhq"
+        color="#FFFFFF"
+        font-size="20px"
+        font-weight="300"
+      >
+        Sistemas
+      </p>
+    </div>
+    <button
+      class="sc-dkrFOg gulMTY"
+      height="45px"
+      width="90px"
+    >
+      <div
+        class="sc-hLBbgP fEIcqa"
+      >
+        <img
+          alt="Icone do carrinho de compras"
+          data-nimg="1"
+          decoding="async"
+          height="18"
+          loading="lazy"
+          src="./cart.svg"
+          style="color: transparent;"
+          width="18"
+        />
+        <p
+          class="sc-gswNZR iFEBoy"
+          font-size="18px"
+          font-weight="700"
+        >
+          0
+        </p>
+      </div>
+    </button>
+  </div>
+</nav>
+`;

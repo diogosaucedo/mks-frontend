@@ -1,36 +1,29 @@
+import { render, screen } from '@testing-library/react';
 import React from 'react';
-import { render } from '@testing-library/react';
-import { NavBar } from './Navbar';
+import { NavBar } from '.';
+import { store } from '@/store/';
+import { Provider } from 'react-redux';
 
 describe('Navbar component', () => {
-  // it('renders with given width and height', () => {
-  //   const { container } = render(<NavBar />);
+  test('should render properties correctly', () => {
+    render(
+      <Provider store={store}>
+        <NavBar />
+      </Provider>,
+    );
 
-  //   expect(container).toBeInTheDocument();
-  //   expect(container).toHaveStyle(`width: 100%`);
-  //   expect(container).toHaveStyle(`height: 100px`);
-  // });
-
-  // it('renders with given background color', () => {
-  //   const { container } = render(<NavBar />);
-  //   expect(container).toHaveStyle(`background: #0F52BA`);
-  // });
-
-  it('renders heading with text "MKS"', () => {
-    const { getByText } = render(<NavBar />);
-    const heading = getByText('MKS');
-    expect(heading).toBeInTheDocument();
+    expect(screen.getByText('MKS')).toBeInTheDocument();
+    expect(screen.getByText('Sistemas')).toBeInTheDocument();
+    expect(screen.getByRole('button')).toBeInTheDocument();
   });
 
-  it('renders subheading with text "Sistemas"', () => {
-    const { getByText } = render(<NavBar />);
-    const subHeading = getByText('Sistemas');
-    expect(subHeading).toBeInTheDocument();
-  });
+  it('should match snapshot', () => {
+    const { asFragment } = render(
+      <Provider store={store}>
+        <NavBar />
+      </Provider>,
+    );
 
-  it('renders button with text "0"', () => {
-    const { getByText } = render(<NavBar />);
-    const button = getByText('0');
-    expect(button).toBeInTheDocument();
+    expect(asFragment().firstChild).toMatchSnapshot();
   });
 });

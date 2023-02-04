@@ -2,49 +2,64 @@ import styled from 'styled-components';
 
 import NavbarProps from './types';
 import { size } from '@/themes';
+import { Heading } from '@/components/Typography/Heading/styles';
+import { Text } from '@/components/Typography/Text/styles';
+import { Button } from '@/components/Form/Button/styles';
+import { Stack } from '@/components/Layout/Stack/styles';
+import { Image } from '@/components/Media/Image/styles';
 
 const Navbar = styled.nav<NavbarProps>`
   // Layout
   display: flex;
-  align-items: center;
+  align-items: flex;
   justify-content: center;
 
   // Box Model
   width: ${({ width }) => width};
+  min-width: ${({ minWidth }) => minWidth};
+  max-width: ${({ maxWidth }) => maxWidth};
   height: ${({ height }) => height};
+  min-height: ${({ minHeight }) => minHeight};
+  max-height: ${({ maxHeight }) => maxHeight};
+  padding: ${({ padding }) => padding};
 
   // Display
   background: ${({ background }) => background};
-
-  // Responsive
+  border: ${({ border }) => border};
+  border-top: ${({ borderTop }) => borderTop};
+  border-right: ${({ borderRight }) => borderRight};
+  border-bottom: ${({ borderBottom }) => borderBottom};
+  border-left: ${({ borderLeft }) => borderLeft};
+  border-radius: ${({ borderRadius }) => borderRadius};
+  box-shadow: ${({ boxShadow }) => boxShadow};
 
   @media (max-width: ${size.small}px) {
     // Navbar
     height: 48px;
 
     // Branch
-    div div {
-      h1 {
-        font-size: 32px;
-      }
-      p {
-        font-size: 16px;
-      }
+    ${Heading} {
+      font-size: 32px;
+    }
+
+    ${Text} {
+      font-size: 16px;
     }
 
     // Button
-    div button {
+
+    ${Button} {
       width: 52px;
       height: 26px;
-      div {
+      ${Stack} {
         gap: 8px;
-        img {
-          width: 10px;
-          height: 10px;
-        }
-        p {
-          font-size: 12px;
-        }
+      }
+      > ${Image} {
+        width: 10px;
+        height: 10px;
+      }
+      > ${Text} {
+        font-size: 12px;
       }
     }
   }
