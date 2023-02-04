@@ -1,15 +1,13 @@
 'use client';
 
-import { NavBar } from '@/components';
+import { Footer, NavBar } from '@/components';
+import { Cart } from '@/features';
+import { store } from '@/store/';
+import { GlobalStyles } from '@/themes';
 import { Montserrat } from '@next/font/google';
+import { Provider } from 'react-redux';
 
 import HomeLayoutProps from './types';
-import { GlobalStyles } from '@/themes';
-import { Cart } from '@/features';
-import { Footer } from '@/components/Navigation/Footer/Footer';
-
-import { store } from '@/store/';
-import { Provider } from 'react-redux';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
