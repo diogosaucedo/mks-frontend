@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image Component should match snapshot 1`] = `
+<DocumentFragment>
+  <img
+    alt="Uma vez visto, jamais sera desvisto."
+    class="sc-bcXHqe bSypHT"
+    height="90%"
+    src="https://cdn.dicionariopopular.com/imagens/ricardo-milos.jpg"
+    width="90%"
+  />
+</DocumentFragment>
+`;
