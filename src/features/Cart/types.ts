@@ -1,7 +1,7 @@
+import { IBoxModel, IDisplay } from '@/interfaces';
+
 type CartProps = {
   children?: React.ReactNode;
-  width?: string;
-  height?: string;
-  background?: string;
-};
+} & IBoxModel &
+  IDisplay;
 export type { CartProps };

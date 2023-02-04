@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 import { CartProps } from './types';
-import { size } from '@/themes';
+import { colors, size } from '@/themes';
 import { Stack } from '@/components/Layout/Stack/styles';
 import { Button } from '@/components/Form/Button/styles';
 import { Text } from '@/components/Typography/Text/styles';
 
 const Cart = styled.div<CartProps>`
-  width: ${({ width }) => width};
-  height: ${({ height }) => height};
-  background: ${({ background }) => background};
-  z-index: 999;
+  width: 486px;
+  min-height: 100vh;
+  background: ${colors.darkBlue};
+  z-index: 1;
   position: absolute;
   right: 0;
 

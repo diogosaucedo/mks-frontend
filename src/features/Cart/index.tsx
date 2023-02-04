@@ -6,20 +6,29 @@ import { Button, Flex, Heading, Image, Stack, Text } from '@/components';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/store';
 import { toggleVisible } from '@/store/Stock.store';
-import { CartProduct } from '../Cart Product/Cart Product';
+import { CartProduct } from '../CartProduct';
 
 export const Cart = () => {
   const dispatch = useDispatch();
   const stock = useSelector((state: RootState) => state.stock);
+
+  const handleCloseButton = () => {
+    dispatch(toggleVisible());
+  };
+
+  const products = stock?.products.map(({ id, photo, name, price }) => (
+    <CartProduct data={{ id, photo, name, price, amount: 1 }} key={id} />
+  ));
+
   if (stock.visible) {
     return (
-      <Styled.Cart width="486px" height="100vh" background={colors.darkBlue}>
+      <Styled.Cart>
         <Flex
           flexDirection="column"
           width="100%"
           alignItems="center"
           justifyContent="space-between"
-          height="100vh"
+          minHeight="100vh"
         >
           <Flex flexDirection="column" width="90%" padding="20px 0">
             <Stack justifyContent="space-between" alignItems="center">
@@ -36,24 +45,19 @@ export const Cart = () => {
                 height="38px"
                 background={colors.black}
                 borderRadius="50%"
-                onClick={() => dispatch(toggleVisible())}
+                onClick={handleCloseButton}
               >
                 <Image width="15px" src="x.svg" alt="icon close" />
               </Button>
             </Stack>
-            <Stack
+            <Flex
               padding="70px 0"
               flexDirection="column"
               gap="28px"
               alignItems="center"
             >
-              {stock?.products.map(({ id, photo, name, price }) => (
-                <CartProduct
-                  data={{ id, photo, name, price, amount: 1 }}
-                  key={id}
-                />
-              ))}
-            </Stack>
+              {products.map((product) => product)}
+            </Flex>
           </Flex>
           <Flex
             flexDirection="column"

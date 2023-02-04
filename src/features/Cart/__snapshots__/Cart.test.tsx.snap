@@ -1,0 +1,537 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Cart /> should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-hLBbgP bksghu"
+  >
+    <div
+      class="sc-iBYQkv ftBjEV"
+      width="100%"
+    >
+      <div
+        class="sc-iBYQkv JgEpM"
+        width="90%"
+      >
+        <div
+          class="sc-bcXHqe fiMeFo"
+        >
+          <h2
+            class="sc-eDvSVe hOkahJ"
+            color="#FFFFFF"
+            font-size="27px"
+            type="h2"
+            width="180px"
+          >
+            Carrinho de Compras
+          </h2>
+          <button
+            class="sc-gswNZR ccNznE"
+            height="38px"
+            width="38px"
+          >
+            <img
+              alt="icon close"
+              class="sc-pyfCe kPsozc"
+              src="x.svg"
+              width="15px"
+            />
+          </button>
+        </div>
+        <div
+          class="sc-iBYQkv kFWzbU"
+        >
+          <div
+            class="sc-ipEyDJ hYSMdb sc-csuSiG kHiHdU"
+          >
+            <div
+              class="sc-bcXHqe cojVzm"
+            >
+              <div
+                class="sc-iBYQkv eholvE"
+              >
+                <img
+                  alt="Product 1"
+                  class="sc-pyfCe ljnZwJ"
+                  height="60px"
+                  src="photo1.jpg"
+                  width="fit-content"
+                />
+                <p
+                  class="sc-dkrFOg fDejt"
+                  font-size="13px"
+                  width="100px"
+                >
+                  Product 1
+                </p>
+              </div>
+              <div
+                class="sc-bcXHqe hagkwD"
+              >
+                <div
+                  class="sc-bcXHqe koBore"
+                >
+                  <p
+                    class="sc-dkrFOg fvHszv"
+                    font-size="5px"
+                  >
+                    Qtd:
+                  </p>
+                  <div
+                    class="sc-bcXHqe jHqwTT"
+                  >
+                    <button
+                      class="sc-gswNZR hFwvBQ"
+                      font-size="12px"
+                      height="19px"
+                      width="15px"
+                    >
+                      -
+                    </button>
+                    <input
+                      class="sc-gKPRtg bKYIac"
+                      disabled=""
+                      font-size="12px"
+                      height="19px"
+                      type="text"
+                      value=""
+                      width="20px"
+                    />
+                    <button
+                      class="sc-gswNZR hFwvBQ"
+                      font-size="12px"
+                      height="19px"
+                      width="15px"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+                <p
+                  class="sc-dkrFOg dNFUVo sc-jSUZER QifgC"
+                  font-size="14px"
+                  font-weight="700"
+                >
+                  R$9
+                </p>
+              </div>
+            </div>
+            <button
+              class="sc-gswNZR cnmGuK"
+              height="18px"
+              transform="translate(10px, -45px)"
+              width="18px"
+            >
+              <p
+                class="sc-dkrFOg harcBR"
+                color="#FFFFFF"
+                font-size="8px"
+              >
+                X
+              </p>
+            </button>
+          </div>
+          <div
+            class="sc-ipEyDJ hYSMdb sc-csuSiG kHiHdU"
+          >
+            <div
+              class="sc-bcXHqe cojVzm"
+            >
+              <div
+                class="sc-iBYQkv eholvE"
+              >
+                <img
+                  alt="Product 2"
+                  class="sc-pyfCe ljnZwJ"
+                  height="60px"
+                  src="photo2.jpg"
+                  width="fit-content"
+                />
+                <p
+                  class="sc-dkrFOg fDejt"
+                  font-size="13px"
+                  width="100px"
+                >
+                  Product 2
+                </p>
+              </div>
+              <div
+                class="sc-bcXHqe hagkwD"
+              >
+                <div
+                  class="sc-bcXHqe koBore"
+                >
+                  <p
+                    class="sc-dkrFOg fvHszv"
+                    font-size="5px"
+                  >
+                    Qtd:
+                  </p>
+                  <div
+                    class="sc-bcXHqe jHqwTT"
+                  >
+                    <button
+                      class="sc-gswNZR hFwvBQ"
+                      font-size="12px"
+                      height="19px"
+                      width="15px"
+                    >
+                      -
+                    </button>
+                    <input
+                      class="sc-gKPRtg bKYIac"
+                      disabled=""
+                      font-size="12px"
+                      height="19px"
+                      type="text"
+                      value=""
+                      width="20px"
+                    />
+                    <button
+                      class="sc-gswNZR hFwvBQ"
+                      font-size="12px"
+                      height="19px"
+                      width="15px"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+                <p
+                  class="sc-dkrFOg dNFUVo sc-jSUZER QifgC"
+                  font-size="14px"
+                  font-weight="700"
+                >
+                  R$19
+                </p>
+              </div>
+            </div>
+            <button
+              class="sc-gswNZR cnmGuK"
+              height="18px"
+              transform="translate(10px, -45px)"
+              width="18px"
+            >
+              <p
+                class="sc-dkrFOg harcBR"
+                color="#FFFFFF"
+                font-size="8px"
+              >
+                X
+              </p>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-iBYQkv tvFcD"
+        width="100%"
+      >
+        <div
+          class="sc-iBYQkv biqZAK"
+          width="80%"
+        >
+          <p
+            class="sc-dkrFOg kYzYoE"
+            color="#FFFFFF"
+            font-size="28px"
+            font-weight="700"
+          >
+            Total:
+          </p>
+          <p
+            class="sc-dkrFOg kYzYoE"
+            color="#FFFFFF"
+            font-size="28px"
+            font-weight="700"
+          >
+            R$29.98
+          </p>
+        </div>
+        <button
+          class="sc-gswNZR cUQGLN"
+          color="#FFFFFF"
+          font-size="28px"
+          height="97px"
+          width="100%"
+        >
+          <p
+            class="sc-dkrFOg cxIDJR"
+            font-weight="700"
+          >
+            Finalizar Compra
+          </p>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Cart feature should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-hLBbgP bksghu"
+  >
+    <div
+      class="sc-iBYQkv ftBjEV"
+      width="100%"
+    >
+      <div
+        class="sc-iBYQkv JgEpM"
+        width="90%"
+      >
+        <div
+          class="sc-bcXHqe fiMeFo"
+        >
+          <h2
+            class="sc-eDvSVe hOkahJ"
+            color="#FFFFFF"
+            font-size="27px"
+            type="h2"
+            width="180px"
+          >
+            Carrinho de Compras
+          </h2>
+          <button
+            class="sc-gswNZR ccNznE"
+            height="38px"
+            width="38px"
+          >
+            <img
+              alt="icon close"
+              class="sc-pyfCe kPsozc"
+              src="x.svg"
+              width="15px"
+            />
+          </button>
+        </div>
+        <div
+          class="sc-iBYQkv kFWzbU"
+        >
+          <div
+            class="sc-ipEyDJ hYSMdb sc-csuSiG kHiHdU"
+          >
+            <div
+              class="sc-bcXHqe cojVzm"
+            >
+              <div
+                class="sc-iBYQkv eholvE"
+              >
+                <img
+                  alt="Product 1"
+                  class="sc-pyfCe ljnZwJ"
+                  height="60px"
+                  src="photo1.jpg"
+                  width="fit-content"
+                />
+                <p
+                  class="sc-dkrFOg fDejt"
+                  font-size="13px"
+                  width="100px"
+                >
+                  Product 1
+                </p>
+              </div>
+              <div
+                class="sc-bcXHqe hagkwD"
+              >
+                <div
+                  class="sc-bcXHqe koBore"
+                >
+                  <p
+                    class="sc-dkrFOg fvHszv"
+                    font-size="5px"
+                  >
+                    Qtd:
+                  </p>
+                  <div
+                    class="sc-bcXHqe jHqwTT"
+                  >
+                    <button
+                      class="sc-gswNZR hFwvBQ"
+                      font-size="12px"
+                      height="19px"
+                      width="15px"
+                    >
+                      -
+                    </button>
+                    <input
+                      class="sc-gKPRtg bKYIac"
+                      disabled=""
+                      font-size="12px"
+                      height="19px"
+                      type="text"
+                      value=""
+                      width="20px"
+                    />
+                    <button
+                      class="sc-gswNZR hFwvBQ"
+                      font-size="12px"
+                      height="19px"
+                      width="15px"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+                <p
+                  class="sc-dkrFOg dNFUVo sc-jSUZER QifgC"
+                  font-size="14px"
+                  font-weight="700"
+                >
+                  R$9
+                </p>
+              </div>
+            </div>
+            <button
+              class="sc-gswNZR cnmGuK"
+              height="18px"
+              transform="translate(10px, -45px)"
+              width="18px"
+            >
+              <p
+                class="sc-dkrFOg harcBR"
+                color="#FFFFFF"
+                font-size="8px"
+              >
+                X
+              </p>
+            </button>
+          </div>
+          <div
+            class="sc-ipEyDJ hYSMdb sc-csuSiG kHiHdU"
+          >
+            <div
+              class="sc-bcXHqe cojVzm"
+            >
+              <div
+                class="sc-iBYQkv eholvE"
+              >
+                <img
+                  alt="Product 2"
+                  class="sc-pyfCe ljnZwJ"
+                  height="60px"
+                  src="photo2.jpg"
+                  width="fit-content"
+                />
+                <p
+                  class="sc-dkrFOg fDejt"
+                  font-size="13px"
+                  width="100px"
+                >
+                  Product 2
+                </p>
+              </div>
+              <div
+                class="sc-bcXHqe hagkwD"
+              >
+                <div
+                  class="sc-bcXHqe koBore"
+                >
+                  <p
+                    class="sc-dkrFOg fvHszv"
+                    font-size="5px"
+                  >
+                    Qtd:
+                  </p>
+                  <div
+                    class="sc-bcXHqe jHqwTT"
+                  >
+                    <button
+                      class="sc-gswNZR hFwvBQ"
+                      font-size="12px"
+                      height="19px"
+                      width="15px"
+                    >
+                      -
+                    </button>
+                    <input
+                      class="sc-gKPRtg bKYIac"
+                      disabled=""
+                      font-size="12px"
+                      height="19px"
+                      type="text"
+                      value=""
+                      width="20px"
+                    />
+                    <button
+                      class="sc-gswNZR hFwvBQ"
+                      font-size="12px"
+                      height="19px"
+                      width="15px"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+                <p
+                  class="sc-dkrFOg dNFUVo sc-jSUZER QifgC"
+                  font-size="14px"
+                  font-weight="700"
+                >
+                  R$19
+                </p>
+              </div>
+            </div>
+            <button
+              class="sc-gswNZR cnmGuK"
+              height="18px"
+              transform="translate(10px, -45px)"
+              width="18px"
+            >
+              <p
+                class="sc-dkrFOg harcBR"
+                color="#FFFFFF"
+                font-size="8px"
+              >
+                X
+              </p>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-iBYQkv tvFcD"
+        width="100%"
+      >
+        <div
+          class="sc-iBYQkv biqZAK"
+          width="80%"
+        >
+          <p
+            class="sc-dkrFOg kYzYoE"
+            color="#FFFFFF"
+            font-size="28px"
+            font-weight="700"
+          >
+            Total:
+          </p>
+          <p
+            class="sc-dkrFOg kYzYoE"
+            color="#FFFFFF"
+            font-size="28px"
+            font-weight="700"
+          >
+            R$29.98
+          </p>
+        </div>
+        <button
+          class="sc-gswNZR cUQGLN"
+          color="#FFFFFF"
+          font-size="28px"
+          height="97px"
+          width="100%"
+        >
+          <p
+            class="sc-dkrFOg cxIDJR"
+            font-weight="700"
+          >
+            Finalizar Compra
+          </p>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
