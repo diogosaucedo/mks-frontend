@@ -5,8 +5,8 @@ export interface IProduct {
   description: string;
   photo: string;
   price: number;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export type ICardProduct = Pick<IProduct, 'id' | 'photo' | 'name' | 'price'> & {
