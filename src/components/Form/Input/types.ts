@@ -1,3 +1,4 @@
+import { IBoxModel, IDisplay, IText } from '@/interfaces';
 import React from 'react';
 
 type InputProps = {
@@ -6,23 +7,8 @@ type InputProps = {
   onChange?: (e: React.FormEvent<HTMLInputElement>) => void;
   required?: boolean;
   placeholder?: string;
-  pattern?: string;
-  width?: string;
-  height?: string;
-  padding?: string;
-  borderRadius?: string;
-  background?: string;
-  border?: string;
-  borderLeft?: string;
-  borderTop?: string;
-  borderRight?: string;
-  borderBottom?: string;
-  color?: string;
-  fontSize?: string;
-  fontFamily?: string;
-  textAlign?: string;
   outline?: string;
   disabled?: boolean;
-};
+} & IBoxModel & IText & IDisplay;
 
 export default InputProps;

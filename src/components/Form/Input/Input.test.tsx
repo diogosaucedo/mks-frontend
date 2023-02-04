@@ -1,21 +1,71 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 
-import { Input } from './Input';
+import { Input } from '.';
 
-describe('Input', () => {
-  it('should be rendered in the document', () => {
-    const { container } = render(<Input type="email" />);
-    expect(container).toBeInTheDocument();
-  });
+describe('Input component', () => {
+  it('should have the correct type and css properties', () => {
+    const type = 'text';
+    const placeholder = 'This is a input';
+    const disabled = false;
+    const width = '240px';
+    const height = '24px';
+    const fontFamily = 'Arial';
+    const fontSize = '16px';
+    const fontWeight = 700;
+    const color = 'red';
+    const textAlign = 'center';
+    const textDecoration = 'underline';
+    const textTransform = 'uppercase';
+    const textOverflow = 'ellipsis';
+    const wordWrap = 'break-word';
+    const background = '#f2f2f2';
+    const border = 'none';
+    const borderRadius = '5px';
+    const boxShadow = '2px 2px 5px rgba(0,0,0,0.5)';
 
-  it('should be rendered with the correct placeholder', () => {
-    const placeholder = 'Email';
-    const { getByPlaceholderText } = render(
-      <Input type="email" placeholder={placeholder} />,
+    render(
+      <Input
+        type={type}
+        placeholder={placeholder}
+        disabled={disabled}
+        width={width}
+        height={height}
+        fontFamily={fontFamily}
+        fontSize={fontSize}
+        fontWeight={fontWeight}
+        color={color}
+        textAlign={textAlign}
+        textDecoration={textDecoration}
+        textTransform={textTransform}
+        textOverflow={textOverflow}
+        wordWrap={wordWrap}
+        background={background}
+        border={border}
+        borderRadius={borderRadius}
+        boxShadow={boxShadow}
+      />,
     );
-    const input = getByPlaceholderText(placeholder);
-    expect(input).toBeInTheDocument();
+    const inputElement = screen.getByPlaceholderText(placeholder);
+
+    expect(inputElement).toBeInTheDocument();
+    expect(inputElement.tagName).toBe('INPUT');
+    expect(inputElement).toHaveAttribute('type', type);
+    expect(inputElement).toHaveStyle(`width: ${width}`);
+    expect(inputElement).toHaveStyle(`height: ${height}`);
+    expect(inputElement).toHaveStyle(`font-family: ${fontFamily}`);
+    expect(inputElement).toHaveStyle(`font-size: ${fontSize}`);
+    expect(inputElement).toHaveStyle(`font-weight: ${fontWeight}`);
+    expect(inputElement).toHaveStyle(`color: ${color}`);
+    expect(inputElement).toHaveStyle(`text-align: ${textAlign}`);
+    expect(inputElement).toHaveStyle(`text-decoration: ${textDecoration}`);
+    expect(inputElement).toHaveStyle(`text-transform: ${textTransform}`);
+    expect(inputElement).toHaveStyle(`text-overflow: ${textOverflow}`);
+    expect(inputElement).toHaveStyle(`word-wrap: ${wordWrap}`);
+    expect(inputElement).toHaveStyle(`background: ${background}`);
+    expect(inputElement).toHaveStyle(`border: ${border}`);
+    expect(inputElement).toHaveStyle(`border-radius: ${borderRadius}`);
+    expect(inputElement).toHaveStyle(`box-shadow: ${boxShadow}`);
   });
 
   it('should call the onChange function when a change occurs', () => {
@@ -26,38 +76,49 @@ describe('Input', () => {
     expect(onChange).toHaveBeenCalled();
   });
 
-  it('should have the correct type and css properties', () => {
-    const inputProps = {
-      type: 'email',
-      placeholder: 'test',
-      required: true,
-      width: '100px',
-      height: '50px',
-      padding: '10px',
-      borderRadius: '5px',
-      background: '#fff',
-      border: '1px solid #000',
-      color: '#000',
-      fontSize: '14px',
-      fontFamily: 'Arial',
-      outline: 'none',
-    };
+  // Snapshot
+  it('should match the snapshot', () => {
+    const type = 'text';
+    const placeholder = 'This is a input';
+    const disabled = false;
+    const width = '200px';
+    const height = '24px';
+    const fontFamily = 'Arial';
+    const fontSize = '16px';
+    const fontWeight = 400;
+    const color = 'blue';
+    const textAlign = 'center';
+    const textDecoration = 'underline';
+    const textTransform = 'uppercase';
+    const textOverflow = 'ellipsis';
+    const wordWrap = 'break-word';
+    const background = '#f2f2f2';
+    const border = 'none';
+    const borderRadius = '5px';
+    const boxShadow = '2px 2px 5px rgba(0,0,0,0.5)';
 
-    const { getByPlaceholderText } = render(<Input {...inputProps} />);
-
-    const input = getByPlaceholderText('test');
-
-    expect(input.getAttribute('type')).toBe(inputProps.type);
-    expect(input).toHaveAttribute('required');
-    expect(input).toHaveStyle(`width: ${inputProps.width}`);
-    expect(input).toHaveStyle(`height: ${inputProps.height}`);
-    expect(input).toHaveStyle(`padding: ${inputProps.padding}`);
-    expect(input).toHaveStyle(`border-radius: ${inputProps.borderRadius}`);
-    expect(input).toHaveStyle(`background: ${inputProps.background}`);
-    expect(input).toHaveStyle(`border: ${inputProps.border}`);
-    expect(input).toHaveStyle(`color: ${inputProps.color}`);
-    expect(input).toHaveStyle(`font-size: ${inputProps.fontSize}`);
-    expect(input).toHaveStyle(`font-family: ${inputProps.fontFamily}`);
-    expect(input).toHaveStyle(`outline: ${inputProps.outline}`);
+    const { asFragment } = render(
+      <Input
+        type={type}
+        placeholder={placeholder}
+        disabled={disabled}
+        width={width}
+        height={height}
+        fontFamily={fontFamily}
+        fontSize={fontSize}
+        fontWeight={fontWeight}
+        color={color}
+        textAlign={textAlign}
+        textDecoration={textDecoration}
+        textTransform={textTransform}
+        textOverflow={textOverflow}
+        wordWrap={wordWrap}
+        background={background}
+        border={border}
+        borderRadius={borderRadius}
+        boxShadow={boxShadow}
+      />,
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 });

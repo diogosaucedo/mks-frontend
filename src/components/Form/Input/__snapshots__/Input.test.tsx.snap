@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component should match the snapshot 1`] = `
+<DocumentFragment>
+  <input
+    class="sc-bcXHqe dyMAHd"
+    color="blue"
+    font-family="Arial"
+    font-size="16px"
+    font-weight="400"
+    height="24px"
+    placeholder="This is a input"
+    text-decoration="underline"
+    type="text"
+    width="200px"
+  />
+</DocumentFragment>
+`;

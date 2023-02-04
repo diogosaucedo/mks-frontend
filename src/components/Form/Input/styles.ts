@@ -3,24 +3,39 @@ import styled from 'styled-components';
 import InputProps from './types';
 
 const Input = styled.input<InputProps>`
-  // Box Model
+  // Box model
   width: ${({ width }) => width};
+  min-width: ${({ minWidth }) => minWidth};
+  max-width: ${({ maxWidth }) => maxWidth};
   height: ${({ height }) => height};
+  min-height: ${({ minHeight }) => minHeight};
+  max-height: ${({ maxHeight }) => maxHeight};
   padding: ${({ padding }) => padding};
 
-  // Display
-  border-radius: ${({ borderRadius }) => borderRadius};
+  // Typography
+  font-family: ${({ fontFamily }) => fontFamily || 'inherit'};
+  font-size: ${({ fontSize }) => fontSize};
+  font-weight: ${({ fontWeight }) => fontWeight || 400};
+  color: ${({ color }) => color};
+  text-align: ${({ textAlign }) => textAlign};
+  text-decoration: ${({ textDecoration }) => textDecoration};
+  text-transform: ${({ textTransform }) => textTransform};
+  line-height: ${({ lineHeight }) => lineHeight};
+  letter-spacing: ${({ letterSpacing }) => letterSpacing};
+  text-overflow: ${({ textOverflow }) => textOverflow};
+  overflow: ${({ textOverflow }) => textOverflow};
+  word-wrap: ${({ wordWrap }) => wordWrap};
+
+  // Display:
   background: ${({ background }) => background};
   border: ${({ border }) => border};
-  border-left: ${({ borderLeft }) => borderLeft};
-  border-right: ${({ borderRight }) => borderRight};
   border-top: ${({ borderTop }) => borderTop};
+  border-right: ${({ borderRight }) => borderRight};
   border-bottom: ${({ borderBottom }) => borderBottom};
-  color: ${({ color }) => color};
-  font-size: ${({ fontSize }) => fontSize};
+  border-left: ${({ borderLeft }) => borderLeft};
+  border-radius: ${({ borderRadius }) => borderRadius};
+  box-shadow: ${({ boxShadow }) => boxShadow};
   outline: ${({ outline }) => outline};
-  font-family: ${({ fontFamily }) => fontFamily || 'inherit'};
-  text-align: ${({ textAlign }) => textAlign};
 `;
 
 export { Input };
