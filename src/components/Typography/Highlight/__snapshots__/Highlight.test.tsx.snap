@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Highlight component should match snapshot 1`] = `
+<DocumentFragment>
+  <p
+    class="sc-bcXHqe jtGPG sc-gswNZR ivMBXI"
+    color="#f2f2f2"
+    font-family="Arial"
+    font-size="16px"
+    font-weight="500"
+    height="36px"
+    text-decoration="underline"
+    width="300px"
+  >
+    This is a highlight
+  </p>
+</DocumentFragment>
+`;

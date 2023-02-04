@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
+import { Text } from '../Text';
 import HighlightProps from './types';
 
-const Highlight = styled.p<HighlightProps>`
-  // Box model
-  padding: ${({ padding }) => padding};
-
+const Highlight = styled(Text)<HighlightProps>`
   // Display
-  font-family: ${({ fontFamily }) => fontFamily || 'inherit'};
-  font-size: ${({ fontSize }) => fontSize || 'inherit'};
-  font-weight: ${({ fontWeight }) => fontWeight || 'inherit'};
-  color: ${({ color }) => color};
-  background: ${({ background }) => background || 'yellow'};
+  background: ${({ background }) => background};
+  border: ${({ border }) => border};
+  border-top: ${({ borderTop }) => borderTop};
+  border-right: ${({ borderRight }) => borderRight};
+  border-bottom: ${({ borderBottom }) => borderBottom};
+  border-left: ${({ borderLeft }) => borderLeft};
   border-radius: ${({ borderRadius }) => borderRadius};
+  box-shadow: ${({ boxShadow }) => boxShadow};
 `;
 
 export { Highlight };

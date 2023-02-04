@@ -1,12 +1,9 @@
+import { IBoxModel, IDisplay, IText } from '@/interfaces';
+
 type HighlightProps = {
   children: React.ReactNode;
-  padding?: string;
-  fontFamily?: string;
-  fontSize?: string;
-  fontWeight?: number;
-  color?: string;
-  background: string;
-  borderRadius?: string;
-};
+} & IText &
+  IBoxModel &
+  IDisplay;
 
 export default HighlightProps;
