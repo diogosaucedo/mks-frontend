@@ -1,8 +1,8 @@
+import { IBoxModel, IDisplay } from '@/interfaces';
+
 type FooterProps = {
   children: React.ReactNode;
-  width?: string;
-  height?: string;
-  background?: string;
-};
+} & IBoxModel &
+  IDisplay;
 
 export default FooterProps;

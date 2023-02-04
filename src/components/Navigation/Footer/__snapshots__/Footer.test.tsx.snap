@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component should match snapshot 1`] = `
+<DocumentFragment>
+  <footer
+    class="sc-kDvujY hXXoCG"
+    height="34px"
+    width="100%"
+  >
+    <p
+      class="sc-gswNZR PXIuz"
+      font-size="12px"
+    >
+      MKS sistemas © Todos os direitos reservados
+    </p>
+  </footer>
+</DocumentFragment>
+`;

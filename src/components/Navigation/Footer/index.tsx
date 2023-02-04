@@ -1,7 +1,8 @@
-import React from 'react';
-import * as Styled from './styles';
 import { Text } from '@/components/';
 import { colors } from '@/themes';
+import React from 'react';
+
+import * as Styled from './styles';
 
 export const Footer = () => {
   return (
