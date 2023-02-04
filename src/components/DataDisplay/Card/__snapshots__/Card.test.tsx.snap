@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bcXHqe hDQIpv"
+    height="360px"
+    width="320px"
+  >
+    This is a card
+  </div>
+</DocumentFragment>
+`;
