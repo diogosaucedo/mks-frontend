@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading component should match snapshot 1`] = `
+<DocumentFragment>
+  <h4
+    class="sc-bcXHqe bAyjRK"
+    color="black"
+    font-family="Arial"
+    font-size="16px"
+    font-weight="500"
+    height="32px"
+    letter-spacing="0.05em"
+    overflow="hidden"
+    text-decoration="none"
+    type="h4"
+    width="90%"
+  >
+    This is a heading
+  </h4>
+</DocumentFragment>
+`;
