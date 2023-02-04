@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stack component should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bcXHqe bCcJRn"
+  >
+    This is a test text
+  </div>
+</DocumentFragment>
+`;

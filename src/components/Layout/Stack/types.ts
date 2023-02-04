@@ -1,13 +1,8 @@
+import { IDisplay, IFlexContainer } from '@/interfaces';
+
 type StackProps = {
   children: React.ReactNode;
-  flexDirection?: string;
-  alignItems?: string;
-  justifyContent?: string;
-  gap?: string;
-  padding?: string;
-  borderRadius?: string;
-  background?: string;
-  border?: string;
-};
+} & IFlexContainer &
+  IDisplay;
 
 export default StackProps;
