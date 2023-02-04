@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text component should match snapshot 1`] = `
+<DocumentFragment>
+  <p
+    class="sc-bcXHqe jzaAig"
+    color="blue"
+    font-family="Arial"
+    font-size="18px"
+    font-weight="500"
+    height="32px"
+    overflow="hidden"
+    text-decoration="underline"
+    width="320px"
+  >
+    This is a text
+  </p>
+</DocumentFragment>
+`;

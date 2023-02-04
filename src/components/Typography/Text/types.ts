@@ -1,11 +1,8 @@
+import { IBoxModel, IText } from '@/interfaces';
+
 type TextProps = {
   children: React.ReactNode;
-  width?: string;
-  height?: string;
-  fontFamily?: string;
-  fontSize?: string;
-  fontWeight?: number;
-  color?: string;
-};
+} & IBoxModel &
+  IText;
 
 export default TextProps;
